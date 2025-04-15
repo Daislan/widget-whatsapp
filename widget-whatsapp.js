@@ -3,7 +3,7 @@
   const fields = config.fields || [];
   const entity = config.entity || 'people';
   const deal = config.deal === true;
-  const idc = config.idc || 'Google';
+  const clientId = config.clientId || null;
 
   const createInput = (field) => {
     const wrapper = document.createElement('div');
@@ -77,7 +77,7 @@
         ...data,
         entity: entity,
         deal: deal,
-        idc: idc
+        clientId: clientId
       };
 
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
@@ -157,4 +157,3 @@
 
   document.addEventListener('DOMContentLoaded', createWidget);
 })();
-  
