@@ -80,6 +80,8 @@
         clientId: clientId
       };
 
+      console.log('Payload enviado:', payload);
+
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
         method: 'POST',
         headers: {
