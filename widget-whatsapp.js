@@ -3,6 +3,7 @@
   const fields = config.fields || [];
   const entity = config.entity || 'people';
   const deal = config.deal === true;
+  const idc = config.idc || '';
 
   const createInput = (field) => {
     const wrapper = document.createElement('div');
@@ -19,7 +20,7 @@
     input.style.width = '100%';
     input.style.padding = '8px';
     input.style.border = '1px solid #ccc';
-    input.style.borderRadius = '50px';
+    input.style.borderRadius = '8px';
     input.style.marginBottom = '10px';
 
     if (field.name === 'whatsapp') {
@@ -75,7 +76,8 @@
       const payload = {
         ...data,
         entity: entity,
-        deal: deal
+        deal: deal,
+        idc: idc,
       };
 
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
