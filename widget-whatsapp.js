@@ -5,6 +5,10 @@
   const deal = config.deal === true;
   const clientId = config.clientId || null;
 
+  if (!clientId) {
+    console.warn("Widget WhatsApp: clientId não está definido.");
+  }
+
   const createInput = (field) => {
     const wrapper = document.createElement('div');
 
@@ -80,6 +84,8 @@
         clientId: clientId
       };
 
+      console.log('Payload enviado:', payload);
+
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
         method: 'POST',
         headers: {
@@ -88,7 +94,6 @@
         body: JSON.stringify(payload),
       })
         .then(() => {
-          console.log('Payload enviado:', payload);
           form.innerHTML = '<p>Obrigado! Entraremos em contato em breve.</p>';
         })
         .catch(() => {
