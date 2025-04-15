@@ -81,7 +81,8 @@
         ...data,
         entity: entity,
         deal: deal,
-        clientId: clientId
+        clientId: clientId,
+        "teste": "123"
       };
 
       console.log('Payload enviado:', payload);
