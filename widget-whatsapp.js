@@ -77,12 +77,7 @@
         data[f.name] = value;
       });
 
-      const payload = {
-        ...data,
-        clientId: clientId,
-        entity: entity,
-        "teste": "123"
-      };
+      
 
       console.log('Payload enviado:', payload);
 
