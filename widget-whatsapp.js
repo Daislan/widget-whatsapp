@@ -17,7 +17,7 @@
     input.type = field.type;
     input.required = field.required;
     input.style.width = '100%';
-    input.style.padding = '8px';
+    input.style.padding = '20px';
     input.style.border = '1px solid #ccc';
     input.style.borderRadius = '8px';
     input.style.marginBottom = '10px';
