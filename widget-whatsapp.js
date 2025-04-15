@@ -92,7 +92,7 @@
         body: JSON.stringify(payload2),
       })
         .then(() => {
-          form.innerHTML = '<p>Obrigado! Entraremos em contato em breve.</p>';
+          form.innerHTML = '<p>testando o bug.</p>';
         })
         .catch(() => {
           alert('Erro ao enviar. Tente novamente.');
