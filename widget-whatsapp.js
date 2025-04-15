@@ -77,7 +77,7 @@
         ...data,
         entity: entity,
         deal: deal,
-        idc: idc,
+        idc: idc
       };
 
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
