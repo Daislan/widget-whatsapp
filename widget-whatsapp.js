@@ -3,7 +3,7 @@
   const fields = config.fields || [];
   const entity = config.entity || 'people';
   const deal = config.deal === true;
-  const idc = config.idc || '';
+  const idc = config.idc || 'Google';
 
   const createInput = (field) => {
     const wrapper = document.createElement('div');
