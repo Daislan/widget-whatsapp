@@ -79,9 +79,8 @@
 
       const payload = {
         ...data,
-        entity: entity,
-        deal: deal,
         clientId: clientId,
+        entity: entity,
         "teste": "123"
       };
 
