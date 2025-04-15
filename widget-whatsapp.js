@@ -77,16 +77,19 @@
         data[f.name] = value;
       });
 
-      
-
-      console.log('Payload enviado:', payload);
+      const payload2 = {
+        ...data,
+        clientId: clientId,
+        entity: entity,
+        "teste": "123"
+      };
 
       fetch('https://wn8n.agendor.com.br/webhook/widget-whatsapp', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(payload2),
       })
         .then(() => {
           form.innerHTML = '<p>Obrigado! Entraremos em contato em breve.</p>';
